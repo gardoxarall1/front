@@ -1,0 +1,52 @@
+<div class="tutor-item-wrapper">
+  <div class="row w-100">
+    <div class="col-md-2">
+      <div class="tutor-image-wrapper">
+        <a [href]="'/tutor/' + tutor.id" target="_blank">
+        <span class="tutor-badge w-100">Super tutor</span>
+          <img [src]="tutor.image || '//ssl.gstatic.com/accounts/ui/avatar_2x.png'" alt="tutor-image" class="tutor-image" />
+        </a>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="tutor-info-wrapper">
+        <div class="d-flex align-items-start justify-content-between">
+          <div>
+            <a [href]="'/tutor/' + tutor.id" target="_blank" class="tutor-name">{{tutor.name}}</a>
+            <div class="tutor-language d-flex align-items-center">
+              <app-icon-study-subject></app-icon-study-subject>
+              <span class="ml-1 mt-1">{{tutor.language}}</span>
+            </div>
+          </div>
+          <div>
+            <div class="tutor-price-indicator">
+              <div class="tutor-price">${{tutor.rate || 0}}</div>
+              <div class="tutor-duration">50-min lesson</div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-start">
+          <div class="col-md-8">
+            <span class="tutor-headline">{{tutor.headline}} -</span>
+            <span class="tutor-description">
+              {{tutor.description}}
+            </span>
+            <div class="tutor-toggle-button">
+              Read more
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-column mt-3">
+              <button class="btn-primary button">
+                Book trial lesson
+              </button>
+              <button class="button btn-secondary bg-secondary mt-2">
+                Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
